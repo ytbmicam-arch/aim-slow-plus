@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "aimslowplus",
+	"version": "${version}",
+	"name": "Aim Slow Plus",
+	"description": "Client-side mod that smoothly lowers mouse sensitivity when your crosshair gets close to an entity. Never moves your camera: it is not an aim assist.",
+	"authors": ["Aim Slow Plus contributors"],
+	"license": "MIT",
+	"environment": "client",
+	"entrypoints": {
+		"client": ["io.github.aimslowplus.AimSlowPlusClient"],
+		"modmenu": ["io.github.aimslowplus.screen.ModMenuIntegration"]
+	},
+	"mixins": [
+		{
+			"config": "aimslowplus.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"modmenu": "*"
+	}
+}
